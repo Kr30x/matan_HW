@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{gset}
+\begin{document}
+	\maintitle{Матан. Дз 2}
+	\B{1. Указав $N(\epsilon)$, вычислить пределы} \bspace
+	a) $\lim\limits_{n\to \infty} \dfrac{n ^ 2 + 6}{n ^ 2 - 10n + 26} = 1 = a \Leftrightarrow \forall \epsilon > 0 \exists N > 0: \forall n > N : |a - a_n| < \epsilon$\\\\
+	$|1 - a_n| < \epsilon\\
+	\\
+	\bigg|1 - \dfrac{n ^ 2 + 6}{n ^ 2 - 10n + 26}\bigg| = \bigg|\dfrac{n^2 - 10n + 26 - n^2 - 6}{n^2 - 10n + 26}\bigg| = \bigg|\dfrac{-10n + 20}{n ^ 2 - 10n + 26}\bigg|\\
+	\\
+	$Рассмотрим для n > 3, тогда числитель < 0, знаменатель всегда положиетльный, поэтому раскроем модуль со знаком - \bspace
+	$
+	\dfrac{10n - 20}{n ^ 2 - 10n + 26}  < \dfrac{10n - 20}{n ^ 2 - 10n} < \dfrac{10n}{n^2 - 10n} = \dfrac{10}{n - 10} < \dfrac{10}{N - 10} < \epsilon
+	\bspace
+	{N_{(e)} > \dfrac{10}{\epsilon} + 10}
+	\bspace
+	\answer{N_{(e)} > \dfrac{10}{\epsilon} + 10}
+	$
+	\bspace
+	b) $\lim\limits_{n\to \infty} \{(\frac{1}{n ^ 2} + \frac{2}{n ^ 2 } + \cdots + \frac{n - 1}{n ^ 2}) =  \frac{(n - 1)n}{2n^2} = \frac{n ^ 2 - n}{2n^2}\} = \frac{1}{2} = a  \Leftrightarrow \forall \epsilon > 0 \exists N > 0: \\\\
+	\forall n > N : |a - a_n| < \epsilon\\
+	\\
+	|\frac{1}{2} - \frac{n^2 - n}{2n^2}| < \epsilon\\
+	\\
+	|\frac{1}{2} - \frac{n^2 - n}{2n^2}| = |\frac{n ^2  - n ^ 2 + n}{2n^2}| = |\frac{1}{2n}|\\
+	\\$
+	Так как $n > 0$, то раскроем модуль как для положительного числа.\\
+	\\
+	$\frac{1}{2n} < \frac{1}{2N} \epsilon\\
+	\\
+	N_{(e)} > \frac{1}{2\epsilon}$\\
+	\\
+	\answer{$N_{(e)} > \frac{1}{2\epsilon}$}
+	\bspace
+	\textbf{2. Пользуясь арифметикой предела, вычислить:}
+	\bspace
+	а) $\lim\limits_{n\to \infty} \bigg\{\dfrac{5^n + n*3^n + n ^ {10}}{3^{n + 7} + n ^ {100} + 5^{n + 1}} = \dfrac{5^n(1 + \dfrac{n * 3^n}{5^n} + \dfrac{n^{10}}{5^n})}{5^n(5 + \dfrac{5 * 3 ^{n + 7}}{5 ^ n} + \dfrac{5 * n^{100}}{5 ^ n}}) = \dfrac{1 + \dfrac{n * 3^n}{5^n} + \dfrac{n^{10}}{5^n}}{5 + \dfrac{5 * 3 ^{n + 7}}{5 ^ n} + \dfrac{5 * n^{100}}{5 ^ n}}\bigg\} = \dfrac{1}{5}
+	\bspace
+	\answer{\dfrac{1}{5}}
+	\bspace
+	$
+	b) $\lim\limits_{n\to \infty} \bigg\{\dfrac{2n - \sqrt{4n^2 - 1}}{\sqrt{n^2 + 3} - n} = \dfrac{\sqrt{4n^2} - \sqrt{4n^2 - 1}}{\sqrt{n^2 + 3} - \sqrt{n^2}}  = \dfrac{(\sqrt{4n^2} - \sqrt{4n^2 - 1}) * (\sqrt{n^2 + 3} + \sqrt{n^2})}{3} = \bspace = \dfrac{\sqrt{n^2 + 3} + \sqrt{n^2}}{3 * (\sqrt{4n^2} + \sqrt{4n^2 - 1})} = \dfrac{n(\dfrac{\sqrt{n^2 + 3}}{n} + 1)}{3 * n(2 + \dfrac{\sqrt{4n^2 - 1}}{n})} \bigg\} = \dfrac{1 + 1}{3 * (2 + 2)}  = \dfrac{1}{6}
+	\bspace
+	\answer{\dfrac{1}{6}}
+	\bspace
+	$
+	c) $\lim\limits_{n\to \infty} \sin(\frac{n2^n}{n! + 1})$
+	\bspace
+	Используем теорему о двух миллиционерах. 
+	Сначала найдем правого миллиционера. Зная, что $\sin(x) \leq x$, поставим на место правого миллицонера аргумент синуса. Найдем его предел.
+	\bspace
+	$\lim\limits_{n\to \infty} \frac{n2^n}{n! + 1} = 0$ , потому что факториал растет быстрее экспоненты. 
+	\bspace
+	Теперь найдем левого миллиционера. Так как аргумент стремится к 0, то предположим, что аргумент - маленькое число. По словам Мажуга А.М. "Все маленькие чиселки лежат в 1 четверти единичной окружности". Значит можно выбрать 0 в качестве левого миллиционера. 
+	\bspace
+	Так как оба миллиционера стремятся к 0, то по теореме о двух миллиционерах, исходное выражение тоже стремится к 0.
+	\bspace
+	\answer{0}
+	\bspace
+	d) $\lim\limits_{n\to \infty} \sqrt[n]{\dfrac{n^2 + 4^n}{n + 5^n}}
+	\bspace
+	$
+	Используем теоремум о 2 миллиционерах. 
+	\bspace
+	$ \sqrt[n]{\dfrac{4^n}{5^n + 5^n}}< \sqrt[n]{\dfrac{n^2 + 4^n}{n + 5^n}} < \sqrt[n]{\dfrac{4^n + 4^n}{5^n}}$\bspace
+	$\lim\limits_{n\to \infty} \bigg\{\sqrt[n]{\dfrac{4^n}{5^n + 5^n}} = \dfrac{4}{5} * \sqrt[n]{\dfrac{1}{2}}\bigg\} = \dfrac{4}{5}$ \bspace
+	$\lim\limits_{n\to \infty} \bigg\{\sqrt[n]{\dfrac{4^n + 4^n}{5^n}}= \dfrac{4}{5} * \sqrt[n]{2}\bigg\} = \dfrac{4}{5}$\bspace
+	\answer{$\dfrac{4}{5}$}
+	\bspace
+	e) $\lim\limits_{n\to \infty} \dfrac{1! + 2! + \cdots + n!}{n!}$ \bspace
+	Использем теорему о 2 миллиционерах. В правой части я воспользовался хинтом, но так как (n - 1) > (n - 2), то $(n - 1) * (n - 2)! > (n - 2) * (n - 2)!$ \bspace
+	$ \dfrac{n!}{n!}< \dfrac{1! + 2! + \cdots + n!}{n!} < \dfrac{(n - 1) * (n - 2)! + (n - 1)! + n!}{n!}$\bspace
+	$\lim\limits_{n\to \infty} \dfrac{n!}{n!} = 1$ \bspace
+	$\lim\limits_{n\to \infty} \bigg\{\dfrac{(n - 1) * (n - 2)! + (n - 1)! + n!}{n!} = \dfrac{2*(n - 1)! + n!}{n!} =  \dfrac{n!\bigg(1 + \dfrac{2*(n - 1)!}{n * (n - 1)!}\bigg)}{n!} =\bspace= 1 + \dfrac{2*(n - 1)!}{n * (n - 1)!}\bigg\} = 1$ \bspace
+	\answer{1}
+	\bspace
+	f) $\lim\limits_{n\to \infty} \dfrac{n! * n^n}{(3n)!}$ \bspace
+	Используем теорему о 2 миллиционерах. \bspace
+	$ \dfrac{n!}{(3n)!}< \dfrac{n! * n^n}{(3n)!}< \dfrac{n! * n^n}{n! * n^{2n}}$\bspace
+	$\lim\limits_{n\to \infty} \dfrac{n!}{n!} = 0$ \bspace
+	$\lim\limits_{n\to \infty} \dfrac{n! * n^n}{n! * n^{2n}} = 0$ \bspace
+	\answer{1}
+	\bspace
+	g) $\lim\limits_{n\to \infty} \bigg\{ \sin(\pi \sqrt[3]{n^3 + 1}) = (-1)^n*\sin(\pi \sqrt[3]{n^3 + 1} - \pi n) = \bspace =  (-1)^n*\sin\bigg(\dfrac{\pi^3(n^3 + 1) - \pi^3n^3}{\pi^2\sqrt[3]{(n^3 + 1)^2} +  \pi^2n\sqrt[3]{n^3 + 1} + \pi^2n^2} \bigg) = \bspace = (-1)^n*\sin\bigg(\dfrac{\pi}{\sqrt[3]{(n^3 + 1)^2} +  n\sqrt[3]{n^3 + 1} + n^2}\bigg)\bigg\} = (-1)^n * \sin{0} = 0$ 
+	\bspace
+	\answer{0}
+\end{document}

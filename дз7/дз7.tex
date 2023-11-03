@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage{gset}
+\usepackage[]{preamble}
+\begin{document}
+	\maintitle{Матан Дз 7}
+	\quad \bs
+	\textbf{1. По Гейне, доказать} \sspace
+	$\lim\limits_{x \to 9} \sqrt{x} = 3$ \sspace
+	$\forall \{x\}_{n = 1}^\infty: \lim\limits_{n \to \infty} x_n = 9 \rsa \lim\limits_{n \to \infty} \sqrt{x_n} = 3, x_n \in [0 , 9) \cup (9, +\infty]$ \sspace
+	$
+	\forall \epsilon > 0: \exists N: \forall n > N \hookrightarrow |x_n - 9| < \epsilon
+	\sspace
+	|x_n - 9| = |\sqrt{x} - 3||\sqrt{x} + 3| < |\sqrt{x} - 3| < \epsilon \Rightarrow \lim\limits_{n \to \infty} \sqrt{x_n} = 3
+	$ \\
+	(пункт стоит мало а тут кроме этого еще миллион задач, поэтому я не уверен в том, что написал)
+	\bs
+	\textbf{2 По Коши, доказать} \sspace
+	$\lim\limits_{x \to 0} f(x) = 2$, где \sspace
+	$
+	\begin{cases}
+		2, \quad x \in \mathbb{R} \sm {0} \\ 
+		0, \quad x = 0
+	\end{cases}
+	$
+	\sspace
+	Так как х никогда не принимает значение 0, то $\forall \epsilon > 0: \exists \delta > 0: \forall x \in B'_{\delta} \hookrightarrow |x - 2|  = 0 < \epsilon \Rightarrow \lim\limits_{x \to 0} f(x) = 2$ 
+	\bs 
+	\textbf{3. Вычислить пределы} \sspace
+	a) $\lim\limits_{x \to -1} \bigg\{\dfrac{2x^4 + 5x^3 + 3x^2 - x - 1}{-x^4 - x^3 + 3x^2 + 5x + 2} = \dfrac{(2x^3 + 3x^2 - 1)(x + 1)}{(-x^3 + 3x + 2)(x + 1)} = \dfrac{2x^3 + 3x^2 - 1}{-x^3 + 3x + 2} = \dfrac{(2x^2 + x - 1)(x + 1)}{(- x^2 + x + 2)(x + 1)} = \dfrac{2x^2 + x - 1}{- x^2 + x + 2} = \dfrac{(2x - 1)(x + 1)}{(-x  + 2)(x + 1)} = \dfrac{2x + 1}{-x + 2} \bigg\} = \dfrac{-2 + 1}{1 + 2} = \dfrac{-1}{3}$ \bs
+	b) $\lim\limits_{x \to -8} \bigg\{\dfrac{\sqrt{1 - x} - 3}{2 + \sqrt[3]{x}} = \dfrac{-(x + 8)(4 - 2\sqrt[3]{x} + \sqrt[3]{x}^2)}{(8 + x) (\sqrt{1 - x} + 3)} = \dfrac{-(4 - 2\sqrt[3]{x} + \sqrt[3]{x}^2)}{\sqrt{1 - x} + 3}\bigg\} = \dfrac{-4 - 4 - 4}{6} = -2$ \bs
+	c) $\lim\limits_{x \to 1} \bigg\{\bigg(\dfrac{3}{1 - x ^3} + \dfrac{1}{x - 1}\bigg) = \dfrac{-3 + x^2 + x + 1}{x^3 - 1
+	} = \dfrac{(x + 1)(x + 2)}{(x + 1)(x^2 + x + 1)} = \dfrac{x + 2}{x^2 + x + 1}\bigg\} = \dfrac{1 + 2}{1 + 1 + 1} = 1$ \bs
+	d) $\lim\limits_{x \to 0} \bigg\{\dfrac{\sqrt[k]{1 + ax} - \sqrt[m]{1 + bx}}{x} = \dfrac{\sqrt[km]{(1 + ax)^m} - \sqrt[km]{(1 + bx) ^ k}}{x} = \dfrac{(1 + ax)^m - (1 + bx)^k}{x * (\cdots)}= \bs = \dfrac{1 + C_m^1(ax) + C_m^2(ax)^2 + \cdots + (ax)^m - 1 - C_k^1(bx) - C_k^2(bx)^2 - \cdots - (bx)^k}{x * (\cdots)} = \bs =  \dfrac{ + C_m^1a + C_m^2a^2x + \cdots + a^mx^{m - 1}  - C_k^1b - C_k^2b^2x - \cdots - b^kx^{k - 1}}{\cdots} = \bs =  \dfrac{ +C_m^1a + C_m^2a^2x + \cdots + a^mx^{m - 1}  - C_k^1b - C_k^2b^2x - \cdots - b^kx^{k - 1}}{\sqrt[km]{(1 + ax)^{km - 1}} + \sqrt[km]{(1 + ax)^{km - 2} * (1 + bx)} + \cdots + \sqrt[km]{(1 + bx) ^ {km - 1}}} \bigg\} = \dfrac{ma - kb}{1 + 1 + \cdots + 1} = \dfrac{ma -p kb}{km}$
+	\bs
+	\textbf{4. Вычислить пределы} \sspace
+	a) $\lim\limits_{x \to 0} \dfrac{\tg(3x)}{e^{2x} - 1} = \lim\limits_{x \to 0} \dfrac{\tg(3x)}{3x} * \dfrac{3x}{e^{2x} - 1} = \lim\limits_{x \to 0} \dfrac{\tg(3x)}{3x} * \lim\limits_{x \to 0} \dfrac{3x}{e^{2x} - 1} = 1 * \dfrac{3}{2} = \dfrac{3}{2}$ \\ (не понял до конца, как тут сделать, используя только то, что мы знаем) \sspace
+	b) $\lim\limits_{x \to 0} \dfrac{x - \sin(2x)}{x + \sin{3x}} = \lim\limits_{x \to 0} \dfrac{1 - \dfrac{\sin(2x)}{x}}{1 + \dfrac{\sin{3x}}{x}} = \dfrac{1 - 2}{1 + 3} = \dfrac{1}{4} \bs
+	$
+	c) $ \lim\limits_{x \to 0}
+	\dfrac{\tg{x} - \sin{x}}{\sin{x}^3x} = \lim\limits_{x \to 0} \dfrac{\sin{x} - \sin{x}\cos{x}}{\cos{x}\sin{x}^3} = \lim\limits_{x \to 0} \dfrac{1 - \cos{x}}{\cos{x}\sin{x}^2} = \lim\limits_{x \to 0} \dfrac{1}{\cos{x}(1 + \cos{x})} = \dfrac{1}{1 * (1 + 1)} = \dfrac{1}{2} \bs
+	$
+	d) $\lim\limits_{x \to 0} \dfrac{\cos{ax}\cos{bx} - 1}{x ^ 2} = \lim\limits_{x \to 0} \dfrac{\cos{ax}\cos{bx} + \cos{ax} - \cos{ax} - 1}{x ^ 2} = \lim\limits_{x \to 0} \dfrac{\cos{ax}(1 + \cos{bx}) - \cos{ax} - 1}{x^2} = \lim\limits_{x \to 0} (\dfrac{\cos{ax}(1 + \cos{bx})(1 - \cos{bx})}{(x ^ 2)(1 + \cos{bx})} - \dfrac{(\cos{ax} + 1)(\cos{ax} - 1)}{(x ^ 2)(\cos{ax} + 1)}) = \lim\limits_{x \to 0} (-\dfrac{\cos{ax}\sin^2{(bx)}}{(x ^ 2)(1 + \cos{bx})} + \dfrac{\sin^2(ax)}{(x ^ 2)(\cos{ax} + 1)}) = \lim\limits_{x \to 0} (-\dfrac{\cos{ax}\sin^2{(bx)}b^2}{x^2(1 + \cos{bx})b^2} + \dfrac{\sin^2(ax)*a^2}{x ^ 2(\cos{ax} + 1)*a^2}) = \lim\limits_{x \to 0} \dfrac{\cos{ax}b^2}{1 + \cos{bx}} + \dfrac{a^2}{\cos{ax} + 1} = - \dfrac{1 * b^ 2}{2} + \dfrac{a^2}{2} = \dfrac{a^2 - b^2}{2}
+	\bs
+	$
+	e) $\lim\limits_{x \to 0} \dfrac{\ln(x ^ 2 + \cos(\dfrac{\pi x}{2})}{\sqrt{x} - 1} = \lim\limits_{t \to 0} \dfrac{\ln(t^2 + 2t + 1 + \cos{\dfrac{\pi t + \pi}{2}})}{\sqrt{t + 1} - 1} =  \lim\limits_{t \to 0} \dfrac{\ln(t^2 + 2t + 1 + \cos{\dfrac{\pi t + \pi}{2}})(\sqrt{t + 1} + 1)}{t} =  \bs =  \lim\limits_{t \to 0} \dfrac{(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})\ln(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})(\sqrt{t + 1} + 1)}{t(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})} = \lim\limits_{t \to 0} \dfrac{(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})(\sqrt{t + 1} + 1)}{t} = \bs = \lim\limits_{t \to 0} \dfrac{(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})(\sqrt{t + 1} - 1)}{t} + \dfrac{2t^2 + 4t  - 2sin{\dfrac{\pi t}{2}}}{t} = \bs =  \lim\limits_{t \to 0}  2t + 4 - \dfrac{2sin{\dfrac{\pi t}{2}} * \dfrac{\pi}{2}}{\dfrac{\pi}{2}t} + \dfrac{(t^2 + 2t + 1 - \sin{\dfrac{\pi t}{2}})(\sqrt{t + 1} - 1)}{t} = 4 - \pi
+	$	
+\end{document}

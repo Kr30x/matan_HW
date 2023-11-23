@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage{gset}
+\usepackage[]{preamble}
+\begin{document}
+	\maintitle{Матан Дз 8}
+	\quad \bs
+	\textbf{1.} \sspace
+	a) Пусть $f \in \overline{o}(f), x \to a \Rightarrow f = \alpha * f, \alpha \to 0, x \to a$. $\alpha = \dfrac{f}{f} = 1, \alpha \to 1, x \to a \Rightarrow $ противоречие. Утверждение неверно. \sspace
+	b) $f \in \underline{O}(f), x \to a \Rightarrow f = \alpha * f, \alpha$ - ограничена при $x \to a$ . $\alpha = \dfrac{f}{f} = 1 \Rightarrow \lim\limits_{x \to a} \alpha = 1 \Rightarrow \alpha$ - ограничена при $x \to a$. Утверждение верно.  \sspace
+	c) $f * \overline{o}(g) = \overline{o}(f * g), x \to a \sspace$
+	Пусть $h \in f * \overline{o}(g) \Rightarrow \exists g_1 \in \overline{o}(g): h = f * g_1, g_1 \to 0, x \to a \Rightarrow \exists \alpha: g_1 = \alpha * g, \alpha \to 0, x \to a \Rightarrow \sspace 
+	h = \alpha * (f * g), \alpha \to 0, x \to a \Rightarrow h \in \overline{o}(f * g)$. Утверждение верно.  \sspace
+	d) $\overline{o}(f) * \overline{o}(g) = \overline{o}(f * g), x \to a$ \sspace
+	Пусть $h \in \overline{o}(f) * \overline{o}(g) \Rightarrow \exists f_1 = \alpha * f, \alpha \to 0, x \to a; \exists g_1 = \beta * g, \beta \to 0, x \to a \Rightarrow \sspace
+	h = f_1 * g_1 = \alpha * \beta * f * g, \alpha * \beta \to 0, x \to a \Rightarrow h \in  \overline{o}(f * g). $ Утверждение верно. \sspace
+	e) $\underline{O}(\overline{o}(f)) = \underline{O}(f)$ \sspace
+	Пусть $h \in \underline{O}(\overline{o}(f)) \Rightarrow \exists g \in \underline{O}(k), k \in \overline{o}(f) \Rightarrow g = \alpha * k, \alpha -$ ограничена при $x \to a, k = \beta * f, \beta \to 0, x \to a \Rightarrow h = \alpha * (\beta * f), \alpha - $ ограничена, при $x \to a, \beta \to 0, x \to a \Rightarrow h \to 0, x \to a \Rightarrow h - $ органичена при $x \to a \Rightarrow h \in \underline{O}(f)$. Утверждение верно. \sspace
+	f) $\overline{o}(f) + \underline{O}(f) = \overline{o}(f), x \to a \sspace$
+	Пусть $h = \overline{o}(f) + \underline{O}(f) \Rightarrow h = g * k, g \in \overline{o}(f), k \in \underline{O}(f) \Rightarrow g = \alpha * f, \alpha \to 0, x \to a; k -$ ограничена при $x \to a \Rightarrow g  + k$ - ограничена при $x \to a$, пусть неверно $k \to 0, x \to a$, тогда неверно и $(g + k) \to 0, x \to a \Rightarrow h \not \in \overline{o}(f)$, значит утверждение неверно. \sspace
+	g) $\overline{o}(f + \underline{O}(f)) = \overline{o}(f), x \to a$ \sspace
+	Пусть $g \in \overline{o}(f + \underline{O}(f)) \Rightarrow g = \alpha (f + h), h \in \underline{O}(f), \alpha \to 0, x \to a \Rightarrow h = \beta * f, \beta -$ ограничена при $x \to a \Rightarrow g = \alpha (f + f * \beta) = \alpha * (\beta + 1) * f$. $\alpha \to 0, x \to a \Rightarrow a * (b + 1) \to 0, x \to a \Rightarrow g \in \overline{o}(f)$. Утверждение верно \sspace
+	h) $(x + \overline{o}(x)) * (7x^2 + \overline{o}(x^2)) = 7x^3 + \overline{o}(x^3), x \to 0$ \sspace
+	$\forall \lambda \neq 0: \lambda * f + \overline{o}(f) = f * (\alpha  + \lambda), \alpha \to 0,  x \to 0 \Rightarrow \alpha + \lambda \to \lambda, x \to 0 \Rightarrow \lambda * f + \overline{o}(f) = \underline{O}(f)$ \sspace
+	$\underline{O}(x) * \underline{O}(x ^ 2) = \underline{O}(x ^ 3), x \to 0 \Rightarrow \alpha * x  * \beta * x ^ 2 = \gamma * x ^ 3, \alpha, \beta, \gamma$ - ограничены при $x \to a \Rightarrow 0 = 0$ Утверждение верно. \sspace
+	\textbf{2.} \sspace
+	a) $\lim\limits_{x\to 0} \dfrac{\sqrt[5]{1 + 2x} - e^x}{\sqrt[4]{1 + x} - \cos x} = \lim\limits_{x\to 0} \dfrac{1 + \dfrac{2x}{5} + \overline{o}(2x) - (1  + x + \overline{o}(x))}{1 + \dfrac{x}{4} + \overline{o}(x) - (1 - \dfrac{x^2}{2} + \overline{o}(x ^ 3))} = \lim\limits_{x \to 0} \dfrac{-\dfrac{3x}{5} + \overline{o}(x)}{\dfrac{x^2}{2} + \dfrac{x}{4} + \overline{o}(x) + \overline{o}(x^3)} = \bs = \lim\limits_{x\to 0} \dfrac{-\dfrac{3}{5} + \overline{o}(1)}{\dfrac{x}{2} + \dfrac{1}{4} + \overline{o}(1) + \overline{o}(x^2)} = \dfrac{-\dfrac{3}{5}}{\dfrac{1}{4}} = \dfrac{-12}{5}$ \bs
+	b) $\lim\limits_{x\to 0} x(\dfrac{1}{1 - \sqrt{1 + 3x}} - \dfrac{1}{\sin x}) = \lim\limits_{x\to 0} (\dfrac{x(1 + \sqrt{1 + 3x})}{-3x} - \dfrac{x}{\sin x}) = \lim\limits_{x\to 0} \dfrac{(1 + 1  + \dfrac{3x}{2} + \overline{o}(x))}{-3} - 1 = \dfrac{-2}{3} - 1 = \dfrac{-5}{3}$ \sspace
+	c) $\lim\limits_{x\to 0} \dfrac{(1 + 3x) ^ {5x} - 1}{x^2} = \lim\limits_{x\to 0} \dfrac{1 + e^{5x\ln{(1 + 3x)}} - 1}{x ^ 2} = \dfrac{5x\ln(1 + 3x)  + \overline{o}(5x\ln(1 + 3x))}{x^2} = \bs = \dfrac{15x^2 + 5x\overline{o}(x^2)  + \overline{o}(5x\ln(1 + 3x))}{x^2} = 15 + 0 + 0 =15$ \sspace
+	d)  $\lim\limits_{x\to 0} \dfrac{\arccos {(1 - x)}}{\sqrt{x}} = \lim\limits_{t\to 0} \dfrac{\arccos(\cos(t))}{\sqrt{-\cos t+1}} = \lim\limits_{x\to 0} \dfrac{t}{\sqrt{1 - (1 - \dfrac{t^2}{2} + \overline{o}(t^3))}} = \lim\limits_{x\to 0} \dfrac{t}{\sqrt{\dfrac{t^2}{2} + \overline{o}(t^3)}} = \dfrac{t}{t\sqrt{\dfrac{1}{2} + \overline{o}(t)}} = \dfrac{1}{\sqrt{\dfrac{1}{2} + 0}} = \sqrt{2}$ \sspace
+	e) $\lim\limits_{x\to \infty} \dfrac{\ln(1  + \sqrt[3]{x})}{\ln(2 + \sqrt[5]{x})} = \lim\limits_{t \to 0} \dfrac{\ln\bigg(1  + \sqrt[3]{\dfrac{1}{t}}\bigg)}{\ln\bigg(2 + \sqrt[5]{\dfrac{1}{t}}\bigg)} = \lim\limits_{t\to 0} \dfrac{5\ln\bigg(1 + \sqrt[3]{\dfrac{1}{t}}\bigg)^3}{3\ln\bigg(2 + \sqrt[5]{\dfrac{1}{t}}\bigg)^5} = \lim\limits_{x\to \infty} \dfrac{5 (x + ... +  \overline{o}(x))}{3(1 + x + ... + \overline{o}(1 + x))} = \dfrac{5}{3}$ \sspace
+	f) $\lim\limits_{x\to 0} \dfrac{\sin^{ok} x}{\tg^{om}x}, k, m, \in \mathbb{N}$ \sspace
+	Индукция $P_n: \sin^{ok}x = x + \overline{o}(x)$ \sspace
+	$P_1$: $\sin x  = x + \overline{o}(x^2) = x + \overline{o}(x), x \to 0$ \sspace
+	$P_{n + 1}$: $\sin^{o(n + 1)}x = \sin(\sin^{on}x) = \sin (x + \overline{o}(x)) = x + \overline{o}(x) + \overline{o}(x + \overline{o}(x)) = x + \overline{o}(x), x \to 0$
+	\sspace
+	Индукция $P_n: \tg^{ok}x = x + \overline{o}(x)$ - аналогично \sspace
+	$\lim\limits_{x\to 0} \dfrac{\sin^{ok} x}{\tg^{om}x} = \lim\limits_{x\to 0} \dfrac{x + \overline{o}(x)}{x + \overline{o}(x)} = 1$
+\end{document}

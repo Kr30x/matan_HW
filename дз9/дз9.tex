@@ -1,0 +1,36 @@
+\documentclass[11pt]{article}
+\usepackage{gset}
+\usepackage[]{preamble}
+\begin{document}
+	\maintitle{Матан Дз 9}
+	\quad \sspace
+	\textbf{1. Установить род каждой точки разрыва} \sspace
+	a) 0 - точка разрыва. \sspace
+	$\lim\limits_{x \to 0^{-}} 2^{x^{-1}} = +\infty$ \quad $\lim\limits_{x \to 0^{+}} 2^{x^{-1}} = +\infty$. \sspace
+	Так как хотя бы один из односторонних пределов равен бесконечности, то 0 - точка разрыва второго рода. \sspace
+	b) 0 - точка разрыва.\sspace
+	$\lim\limits_{x \to 0^{-}}\arctan{\dfrac{1}{x}} = -\dfrac{\pi}{2} \quad \lim\limits_{x \to 0^{+}}\arctan{\dfrac{1}{x}} = \dfrac{\pi}{2}$ \sspace
+	Так как односторонние пределы отличаются на конечную величину, то 0 - точка разрыва первого рода \sspace
+	c) Любая точка из множества $\mathbb{R} \backslash \mathbb{Q}$ - точка разрыва. Возьмем произвольную точку $a$ из этого множества. Рассмотрим подотрезок последовательности всех рациональных чисел, где каждый элемент меньше $a$. По определению предела получим, что $\lim\limits_{x \to a^{-}} x = a$. Аналогично $\lim\limits_{x \to a^{+}} x = a$. Так как односторонние пределы одинаковые, то точка $a$, как и все из множества $\mathbb{R} \backslash \mathbb{Q}$, является точкой разрыва нулевого рода (устранимой). \bs
+	\textbf{2. Найдите $\lambda$ при котором функция является непрерывной в точке $x = 0$} \sspace
+	По определению функция непрерывна в точке, когда $\lim\limits_{x \to 0} \dfrac{\cos(\sin(3x)) - 1}{x^2} = \lambda$. То есть по факту нам надо найти предел. \sspace 
+	так как $1 - \cos(x) = 2*\sin(\dfrac{x}{2})$, то 
+	$\lim\limits_{x \to 0}\dfrac{\cos(\sin(3x)) - 1}{x^2} = \lim\limits_{x \to 0} \dfrac{-2\sin(\frac{1}{2} * \sin(3x))^2}{x^2} = \lim\limits_{x \to 0} \dfrac{\sin^2(3x)}{-2x^2} = \lim\limits_{x \to 0} \dfrac{9x^2}{-2x^2} = \dfrac{-9}{2}$. \sspace
+	\answer{$\dfrac{-9}{2}$} \bs
+	\textbf{3. Найти производную} \sspace
+	a) $f(x) = \dfrac{2 + x^2}{\sqrt{1 + x^4}} \quad f'(x) = \dfrac{(2 + x^2)'\sqrt{1 + x ^ 4} + (2 + x^2)\sqrt{1 + x ^ 4}'}{1 + x^4} = \dfrac{2x\sqrt{1 + x ^ 4}  + \dfrac{(2 + x ^ 2)4x^3}{2\sqrt{1 + x^4}}}{1 + x ^ 4}$ \sspace
+	b) $f(x) = \arcsin(5^{x^2}) \quad f'(x) = \dfrac{1}{\sqrt{1 - 5^{2x^2}}} * (5^{x^2})' = \dfrac{2*x * 5^{x^2} * \ln(5)}{\sqrt{1 - 5^{2x^2}}}$ \sspace
+	c) $f(x) = (2 + \cos(3x))^{\ln x} \quad f'(x) = (e^{\ln(x)\ln(2 + \cos(3x))})' = (e^{\ln(x)\ln(2 + \cos(3x))}) * (\ln(x) \ln(\cos(3x) + 2))' = {e}^{\ln\left(x\right)\,\ln\left(\cos\left(3\,x\right)+2\right)}\cdot \left(\left(\ln\left(x\right)\right)'\cdot \ln\left(\cos\left(3\,x\right)+2\right)+\left(\ln\left(\cos\left(3\,x\right)+2\right)\right)'\cdot \ln\left(x\right)\right) = \bs = {e}^{\ln\left(x\right)\,\ln\left(\cos\left(3\,x\right)+2\right)}\cdot \left(\dfrac{\ln\left(\cos\left(3\,x\right)+2\right)}{x}+\dfrac{\ln\left(x\right)}{\cos\left(3\,x\right)+2}\cdot \left(\left(\cos\left(3\,x\right)\right)'+\left(2\right)'\right)\right) = \bs =  {e}^{\ln\left(x\right)\,\ln\left(\cos\left(3\,x\right)+2\right)}\cdot \left(\dfrac{\ln\left(\cos\left(3\,x\right)+2\right)}{x}-\dfrac{\ln\left(x\right)\,\sin\left(3\,x\right)}{\cos\left(3\,x\right)+2}\cdot \left(3\,x\right)'\right) = \bs =  \left({\cos\left(3\,x\right)+2}\right)^{\ln\left(x\right)}\,\left(\dfrac{\ln\left(\cos\left(3\,x\right)+2\right)}{x}-\dfrac{3\,\ln\left(x\right)\,\sin\left(3\,x\right)}{\cos\left(3\,x\right)+2}\right)$ что это такое... что за монстр... \sspace
+	d) $f = {2}^{\operatorname{arctg}\left(\sqrt{{x}^{2}+1}\right)} \quad f'(x) = {2}^{\operatorname{arctg}\left(\sqrt{{x}^{2}+1}\right)}\cdot \ln\left(2\right)\cdot \left(\operatorname{arctg}\left(\sqrt{{x}^{2}+1}\right)\right)' = \bs =  \ln\left(2\right)\,{2}^{\operatorname{arctg}\left(\sqrt{{x}^{2}+1}\right)}\cdot \dfrac{1}{{x}^{2}+2}\cdot \left(\sqrt{{x}^{2}+1}\right)' = \dfrac{\ln\left(2\right)\,x\,{2}^{\operatorname{arctg}\left(\sqrt{{x}^{2}+1}\right)}}{\sqrt{{x}^{2}+1}\,\left({x}^{2}+2\right)}$ \sspace 
+	извини, я тут на бумажке немного пописал и не техал каждое действие, а то бы я до Нового года делал бы... \sspace
+	e) $f = {a}^{{a}^{x}}+{a}^{{x}^{a}}+{x}^{{a}^{a}} \quad f'(x) = \left({a}^{{a}^{x}}\right)'+\left({a}^{{x}^{a}}\right)'+\left({x}^{{a}^{a}}\right)' = \ln\left(a\right)\,{a}^{{a}^{x}}\cdot {a}^{x}\cdot \ln\left(a\right)+\ln\left(a\right)\,{a}^{{x}^{a}}\cdot a\cdot {x}^{a-1}+{a}^{a}\,{x}^{{a}^{a}-1} = \bs =  \ln^{2}\left(a\right)\,{a}^{{a}^{x}+x}+\ln\left(a\right)\,{x}^{a-1}\,{a}^{{x}^{a}+1}+{a}^{a}\,{x}^{{a}^{a}-1}$. Если честно, это какая-то пытка была \bs
+	\textbf{4. } \sspace
+	a) Для $x \neq 0$: \sspace
+	$f'(x) = \left(\sin\left(\frac{1}{x}\right)\right)'\cdot {x}^{2}+\left({x}^{2}\right)'\cdot \sin\left(\frac{1}{x}\right) = \cos\left(\frac{1}{x}\right)\,{x}^{2}\cdot \left(-1\right)\cdot \dfrac{1}{{x}^{2}}+2\,\sin\left(\frac{1}{x}\right)\,x = 2\,\sin\left(\frac{1}{x}\right)\,x-\cos\left(\frac{1}{x}\right)$ \sspace
+	Для $x = 0$, вычислим по определению: \sspace
+	$f'(0) = \lim\limits_{\delta x \to 0^{\pm}} \dfrac{\delta y}{\delta x} = \lim\limits_{\delta x \to 0^{\pm}} \dfrac{f(\delta x) - f(0)}{\delta x} = \lim\limits_{\delta x \to 0^{\pm}} \dfrac{f(\delta x)}{\delta x} = \dfrac{(\delta x)^2 * \sin \dfrac{1}{\delta x}}{\delta x} = (\delta x) * \sin \dfrac{1}{\delta x} = 0$ \sspace
+	b) Так как оба односторонних предела равны нулю, то точка 0 является устранимой или 0 рода. \bs
+	\textbf{5. } \sspace
+	$\dfrac{d}{dx} \det A(x) = \dfrac{d}{dx} (a(x) * d(x) - b(x) * c(x)) = a'(x)*d(x) + a(x)*d'(x) - b'(x)*c(x) - c(x)*b'(x) = a'd + ad' - b'c - cb'$ \sspace
+	$tr(adj(A(x)) * \dfrac{dA(x)}{dx}) = tr(\mattwo{d(x) & -b(x)}{-c(x) & a(x)} * \mattwo{a'(x) & b'(x)}{c'(x) & d'(x)}) = da' - bc' - cb' + ad'$
+\end{document}

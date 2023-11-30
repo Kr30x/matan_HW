@@ -1,0 +1,67 @@
+\documentclass[11pt]{article}
+\usepackage{gset}
+\usepackage[]{preamble}
+\usepackage{relsize}
+\begin{document}
+	\maintitle{Матан Дз 10}
+	\quad \sspace
+	\textbf{1. Посчитать дифференциалы} \bs
+	а) $f(x)  = arctg(\dfrac{u}{v}) \bs
+	df = f'dx \bs
+	f' = (arctg(\dfrac{u}{v}))' = \dfrac{1}{1 + \dfrac{u^2}{v^2}} * (\dfrac{u}{v})' = \dfrac{v^2}{u^2 + v ^ 2}  * \dfrac{u'v - uv'}{v^2} = \dfrac{u'v - uv'}{u^2 + v^2} \bs
+	df = \dfrac{u'v - uv'}{v^2} * dx = \dfrac{vdu - udv}{u ^ 2 + v ^ 2} \bs
+	\answer{\dfrac{vdu - udv}{u ^ 2 + v ^ 2}} \bs
+	$
+	b) $f = \dfrac{1}{\sqrt{u^2 + v ^ 2}} \bs
+	df = f'dx \bs
+	f' = (\dfrac{1}{\sqrt{u^2 + v ^ 2}})' = -\dfrac{1}{u^2 + v^2} * \dfrac{1}{2\sqrt{u ^ 2 + v ^ 2}} * (2uu' + 2vv') = -\dfrac{uu' + vv'}{(u ^ 2 + v ^ 2)\sqrt{u ^ 2 + v ^ 2}}\bs
+	df = -\dfrac{uu' + vv'}{(u ^ 2 + v ^ 2)\sqrt{u ^ 2 + v ^ 2}} * dx = -\dfrac{udu + vdv}{(u ^ 2 + v ^ 2)\sqrt{u ^ 2 + v ^ 2}} \bs
+	\answer{-\dfrac{udu + vdv}{(u ^ 2 + v ^ 2)\sqrt{u ^ 2 + v ^ 2}}} \bs
+	$
+	\textbf{2. Доказать, используя матиндукцию} \bs
+	a)
+	$
+	P_n: (cos(ax + b))^{(n)} = a^ncos(ax + b + \dfrac{\pi}{2} * n)
+	$, где $a, b \in R \sspace
+	P_1: cos(ax + b)' = acos(ax + b + \dfrac{\pi}{2}) \sspace
+	cos(ax + b)' = sin(ax + b) * a = cos(ax + b + \dfrac{\pi}{2}) * a
+	$ - верно \sspace
+	$P_{n + 1} = cos(ax + b)^{(n + 1)} = (cos(ax + b)^n)' = (a^ncos(ax + b + \dfrac{\pi}{2} * n))' = 0 + a^n * (cos(ax + b + \dfrac{\pi}{2}) * n)' = a^n * a * sin(ax + b + \dfrac{\pi}{2} * n) = a^{n + 1} * cos(ax + b + \dfrac{\pi}{2} * (n + 1))$ - верно
+	\newpage \quad
+	\bs
+	b) $P_n: (ln(ax + b))^{(n)} = \dfrac{(-1)^{n - 1}(n - 1)!a^n}{(ax + b)^n}$ \bs
+	Это мы доказывали на семинаре, но мне надо бы попрактиковаться, так что решу еще раз сам. \bs
+	$P_1: (ln(ax + b))' = \dfrac{a}{ax + b}$ \sspace
+	$(ln(ax + b))' = \dfrac{1}{ax + b} * (ax)' = \dfrac{a}{ax + b}$ - верно \sspace
+	$P_{n + 1} = (ln(ax + b))^{n + 1} = ((ln(ax + b))^n)' = (\dfrac{(-1)^{n - 1}(n - 1)!a^{n}}{(ax + b)^n})' = (-1)^{n - 1} * (n - 1)! * a^n * ((ax + b)^{-n})' = (-1)^{n - 1} * (n - 1)! * a^n * (-1) * n * a * (ax + b)^{-n-1} = \dfrac{(-1)^n * n! * a^{n + 1}}{(ax + b)^{n + 1}}$ \bs
+	\textbf{3. Найти $n$-ую производную} \bs
+	a) $f(x) = \dfrac{x - 13}{x^2 - x - 6} \sspace$
+	$\dfrac{x - 13}{x^2 - x - 6} = \dfrac{A}{x + 2} + \dfrac{B}{x - 3} = \dfrac{(A+B)x - 3A + 2B}{x^2 - x - 6} \Rightarrow \begin{cases} A+B = 1 \\ -3A + 2B = -13 \end{cases} \Rightarrow \begin{cases}A = 3 \\ B = -2 \end{cases} \Rightarrow \bs \Rightarrow f(x) = \dfrac{x - 13}{x^2 - x - 6} = \dfrac{3}{x + 2} + \dfrac{-2}{x - 3}$ \bs
+	$f(x)^{(n)} = (\dfrac{3}{x + 2})^{(n)} + (\dfrac{-2}{x - 3})^{(n)} = 3 * (\dfrac{1}{x + 2})^{(n)} - 2 * (\dfrac{1}{x - 3})^{(n)}$ \bs
+	$P_n: (\dfrac{1}{x + \lambda})^{(n)} = \dfrac{(-1)^nn!}{(x + \lambda)^{n + 1}} \quad \lambda \in \mathbb{R}\bs$
+	$P_1: (\dfrac{1}{x + \lambda})' = \dfrac{-1}{(x + \lambda)^2}$ - верно \bs
+	$P_{n + 1}: (\dfrac{1}{x + \lambda})^{(n + 1)} = ((\dfrac{1}{x + \lambda})^{(n)})' = (\dfrac{(-1)^nn!}{(x + \lambda)^{n + 1}})' = (-1)^n * n! * (\dfrac{1}{(x + \lambda)^{n + 1}})' = (-1)^n * \dfrac{1}{n!} * (-1) * (n + 1) * \dfrac{1}{(x + \lambda)^{n + 2}} = \bs =  \dfrac{(-1)^{n + 1}(n + 1)!}{(x + \lambda)^{x + 2}}$ - верно \bs
+	$f(x)^{(n)} = 3 * (\dfrac{1}{x + 2})^{(n)} - 2 * (\dfrac{1}{x - 3})^{(n)} = 3 * \dfrac{(-1)^{n}n!}{(x + 2)^{n + 1}} -2 * \dfrac{(-1)^{n}n!}{(x - 3)^{n + 1}}$ \bs
+	b) $f(x) = (x ^ 2 + x + 1)e^{-3x}$ \sspace
+	$f(x)^{(n)} = ((x ^ 2 + x + 1)e^{-3x})^{(n)} = \sum\limits_{k = 0}^{n}\binom{n}{k}(x ^ 2 + x + 1)^{(n)}(e^{-3x})^{(n - k)}$ \bs
+	$n: (x ^ 2 + x + 1)^{(n)}$ \sspace
+	$n = 0: x ^ 2 + x + 1$ \sspace
+	$n = 1: (x ^ 2 + x + 1)' = 2x + 1$ \sspace
+	$n = 2: (x ^ 2 + x + 1)'' = (2x + 1)' = 2$ \sspace
+	$n\geq3: 0$	\sspace
+	$f(x)^{(n)} = \begin{cases} 
+		(x ^ 2 + x + 1)e^{-3x}, n = 0\\  
+		\sum\limits_{k = 0}^{1}\binom{1}{k}(2x + 1)(e^{-3x})^{(1 - k)}, n = 1\\
+		\sum\limits_{k = 0}^{2}\binom{1}{k}2(e^{-3x})^{(2 - k)}, n = 2 \\
+		 0, n \geq 3
+	\end{cases}
+	= \begin{cases} 
+		(x ^ 2 + x + 1)e^{-3x}, n = 0 \\
+		(2x + 1)(e^{-3x})' + (2x + 1)e^{-3x}, n = 1 \\
+		2(e^{-3x})'' + 4(e^{-3x})' + 2e^{-3x}, n = 2 \\
+		0, n \geq 3;
+	\end{cases}
+	$
+	\bs 
+	c) 
+\end{document}
